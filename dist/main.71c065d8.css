@@ -1,0 +1,108 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+*::before,*::before{
+     box-sizing: border-box;
+}
+
+
+ol, ul{
+    list-style: none;
+}
+
+/*   只管body里面的page，如果是body里面的里面的里面的page就不管 */
+body{
+    overflow: hidden;
+}
+body > .page{
+    display: flex; /*   横着放 */
+    flex-wrap: wrap; /*   自动换行 */
+}
+
+body > .page > section{
+   width: 50vw;
+   height: 50vh;
+   border: 1px solid red;
+}
+#app1{
+    border: 1px solid red;
+    width: 50vw;
+    height: 50vh;
+}
+#app1 .output{
+
+}
+#app1 .actions{
+
+}#app2{
+    border: 1px solid rgb(32, 35, 207);
+    width: 50vw;
+    height: 50vh;
+}
+
+#app2 .tab-bar{
+    
+     display: flex; /*让里面的两个li横向*/
+}
+#app2 .tab-bar> li{
+     border: 3px solid rgb(91, 196, 43);
+    width: 50%;
+}
+#app2 .tab-bar> li.selected{
+     background: rgb(11, 12, 12);
+     color: aliceblue;
+}
+#app2 .tab-content{
+    
+}
+
+#app2 .tab-content > li{
+    display: none;/*先让他俩看不见 点击再看到*/
+}
+
+#app2 .tab-content > li.active{
+    display: block;/*哪个标签又class 叫active 就显示*/
+}#app3{}
+#app3 .square{
+    border: 1px solid red;
+    margin-top: 10vw;
+    margin-left: 10vw;
+    width: 10vw;
+    height: 10vw;
+    transition: transform 1s; /*过度时间*/
+}
+
+#app3 .square.active{
+    transform:translateX(15vw);
+}#app4{
+
+}
+@keyframes change {
+    0%{
+        background: red;
+    }
+      25%{
+        background: rgb(201, 119, 13);
+    }
+        50%{
+        background: rgb(135, 201, 13);
+    }
+         75%{
+        background: rgb(54, 15, 194);
+    }
+        100%{
+        background: rgb(189, 11, 150);
+    }
+}
+#app4 .circle{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+
+#app4 .circle.active{
+    animation: change 1s infinite alternate linear;
+    /* 无限  来回 线性*/
+}

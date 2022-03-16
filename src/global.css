@@ -1,0 +1,14 @@
+/*   只管body里面的page，如果是body里面的里面的里面的page就不管 */
+body{
+    overflow: hidden;
+}
+body > .page{
+    display: flex; /*   横着放 */
+    flex-wrap: wrap; /*   自动换行 */
+}
+
+body > .page > section{
+   width: 50vw;
+   height: 50vh;
+   border: 1px solid red;
+}

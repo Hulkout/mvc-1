@@ -1,0 +1,31 @@
+#app4{
+
+}
+@keyframes change {
+    0%{
+        background: red;
+    }
+      25%{
+        background: rgb(201, 119, 13);
+    }
+        50%{
+        background: rgb(135, 201, 13);
+    }
+         75%{
+        background: rgb(54, 15, 194);
+    }
+        100%{
+        background: rgb(189, 11, 150);
+    }
+}
+#app4 .circle{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+
+#app4 .circle.active{
+    animation: change 1s infinite alternate linear;
+    /* 无限  来回 线性*/
+}

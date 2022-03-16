@@ -1,0 +1,29 @@
+#app2{
+    border: 1px solid rgb(32, 35, 207);
+    width: 50vw;
+    height: 50vh;
+}
+
+#app2 .tab-bar{
+    
+     display: flex; /*让里面的两个li横向*/
+}
+#app2 .tab-bar> li{
+     border: 3px solid rgb(91, 196, 43);
+    width: 50%;
+}
+#app2 .tab-bar> li.selected{
+     background: rgb(11, 12, 12);
+     color: aliceblue;
+}
+#app2 .tab-content{
+    
+}
+
+#app2 .tab-content > li{
+    display: none;/*先让他俩看不见 点击再看到*/
+}
+
+#app2 .tab-content > li.active{
+    display: block;/*哪个标签又class 叫active 就显示*/
+}
